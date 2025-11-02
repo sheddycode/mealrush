@@ -1034,12 +1034,17 @@ html { scroll-behavior: smooth; }
   }
 
   .contact-form {
+    width: 100%;
     padding: 25px;
     margin: 0 auto;
   }
 
-  .form-group input{
+   .form-group input,
+  .form-group textarea,
+  .form-group select {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .form-btn {
