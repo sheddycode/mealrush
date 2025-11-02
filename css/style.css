@@ -939,60 +939,60 @@ html { scroll-behavior: smooth; }
 /* === Responsive === */
 @media (max-width: 900px) {
   .vendor-section {
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column;
     text-align: center;
-    padding: 60px 20px;
+    padding: 60px 10px; /* reduce side padding */
+    width: 100%; /* ensure full width */
   }
 
   .riders-left {
-    order: 1; /* Image and heading come first */
+    order: 1;
+    width: 100%; /* full width */
   }
 
   .riders-right {
-    order: 2; /* Form comes after */
-    width: 100%;
+    order: 2;
+    width: 100%; /* full width */
     display: flex;
     justify-content: center;
   }
 
   .contact-form-section {
     width: 100%;
-    max-width: 90%; /* smaller padding on mobile */
+    max-width: 100%; /* allow full width */
     margin-top: 2rem;
-  }
-}
-
-@media (min-width: 350px) and (max-width: 500px) {
-  .contact-form-section {
-    width: 100%;
-    padding: 0 10px;
+    padding: 0; /* remove extra padding */
   }
 
   .contact-form {
-    width: 100%;
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .form-group {
-    width: 100%;
+    width: 100% !important;
     margin-bottom: 1rem;
   }
 
-  .form-group input {
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
     width: 100% !important;
     max-width: 100% !important;
     padding: 0.8rem;
     border-radius: 8px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    display: block;
   }
 
   .form-btn {
-    width: 100%;
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
     padding: 0.8rem;
     border-radius: 8px;
     font-weight: 600;
+    display: block;
   }
 }
 
