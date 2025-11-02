@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Responsive Navbar</title>
+<head>
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-header">
+    <div class="logo">
+      <img src="img/Logo.png" width="100" height="30" alt="OrangeBox Logo">
+    </div>
+
+    <!-- Hamburger (on mobile, now aligned right) -->
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+  </div>
+
+  <!-- Desktop buttons -->
+  <div class="nav-buttons nav-buttons-desktop">
+   
+    <button class="navbtn-wat">
+      <a href="#contact">Contact us</a>
+    </button>
+  </div>
+
+  <!-- Sidebar (mobile) -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="close-btn">&times;</button>
+
+    <!-- Move buttons to the top of the sidebar -->
+    <div class="nav-buttons nav-buttons-mobile">
+       <div class="logo">
+      <img src="img/Logo.png" width="150" height="45" alt="mealRush Logo">
+    </div>
+
+      
+      <button  class="navbtn-wat">
+        <a href="#contact">Contact us</a>
+      </button>
+    </div>
+
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+</nav>
+
+
+<section class="hero">
+  <img src="img/heroimg.svg" alt="Food delivery background" class="hero-bg">
+  
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="poppins-regular-hero">
+        Get your favorite meals delivered <span class="red">fast</span> — from bukas to grills.
+      </h1>
+      <p>
+        Order from the best local spots near you using WhatsApp. No app downloads — just quick ordering and reliable delivery.
+      </p>
+      <div class="hero-buttons">
+        <a href="#how-it-works" class="btn">Order on whatsapp</a>
+        <a href="#menu" class="btn">Become a rider</a>
+        <a href="#contact" class="btn">Become a vendor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- why choose mealRush -->
+ <section class="why-mealrush">
+  <div class="why-left">
+    <h2>Why Choose MealRush</h2>
+    <img src="img/rider.png" alt="Delicious food" class="why-image">
+  </div>
+
+  <div class="why-right">
+    <div class="why-item">
+      <span class="why-number">01</span>
+      <div class="why-text">
+        <h3>Fast Delivery</h3>
+        <p>Get your food delivered hot and fresh within 15 to 25 mins</p>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <span class="why-number">02</span>
+      <div class="why-text">
+        <h3>Affordable prices</h3>
+        <p>Enjoy competitive prices with transparent delivery fees</p>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <span class="why-number">03</span>
+      <div class="why-text">
+        <h3>Wid Coverage</h3>
+        <p>we deliver to all major areas in Makurdi including BSU campus</p>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <span class="why-number">04</span>
+      <div class="why-text">
+        <h3>Quality Assurance</h3>
+        <p>We partner with trusted bukas and resturants you love</p>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- why choss meaRush ends-->
+  <!-- mobile side -->
+    <section class="why-mealrush">
+  <div class="why-right">
+          <h2>How MealRush Works</h2>
+    <div class="why-item">
+      <span class="why-number">01</span>
+      <div class="why-text">
+        <h3>Browse and pick resturants</h3>
+        <p>Open Whatsapp- see nearby resturants select your meal</p>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <span class="why-number">02</span>
+      <div class="why-text">
+        <h3>Confirm order</h3>
+        <p>Confirm order on chat. We send ETA and riders details</p>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <span class="why-number">03</span>
+      <div class="why-text">
+        <h3>Delivered</h3>
+        <p>Riders picks up and delivers - you pay cash on transfer</p>
+      </div>
+    </div>
+  </div>
+
+   <div class="why-left">
+    <img src="img/mobile.png" alt="Delicious food" class="why-image">
+  </div>
+</section>
+   <!-- mobile side ends -->
+
+<div class="cards-container">
+  <div class="card"> <!-- First Card -->
+    <img src="img/Pizza 1.png" alt="Pizza" class="card-img">
+    <h3>Increase Sales</h3>
+    <p>Reach new customers and boost your revenue.</p>
+  </div>
+
+  <div class="card card-tall"> <!-- Second Card -->
+    <img src="img/Chips 1.png" alt="Chips" class="card-img">
+    <h3>Easy Management</h3>
+    <p>Simple Order management via WhatsApp.</p>
+    <p class="see-details">See Details</p>
+  </div>
+
+  <div class="card"> <!-- Third Card -->
+    <img src="img/Pancakes 1.png" alt="Cake" class="card-img">
+    <h3>Zero Setup Cost</h3>
+    <p>Get started quickly with no upfront fees.</p>
+  </div>
+
+  <!--buttons -->
+  <div class="cards-buttons">
+  <a href="#partner" class="card-btn">Talk to us whatsapp</a>
+  <a href="#learn-more" class="card-btn">Partner with us</a>
+</div>
+
+</div>
+    <!-- resturants and bukas ends-->
+
+<!-- Rider Section -->
+<section class="riders-section">
+  <div class="riders-left">
+    <h2>Become a Rider</h2>
+    <img src="img/Frame 5.png" alt="Rider Image" class="riders-image">
+  </div>
+
+  <div class="riders-right">
+    <div class="riders-item">
+      <span class="riders-number">01</span>
+      <div class="riders-text">
+        <h3>Great Pay & High Earnings</h3>
+        <p>We offer a competitive way to make money, with clear and transparent earnings.</p>
+      </div>
+    </div>
+
+    <div class="riders-item">
+      <span class="riders-number">02</span>
+      <div class="riders-text">
+        <h3>A Truly Flexible Schedule</h3>
+        <p>With MealRush, you are in complete control of your schedule.</p>
+      </div>
+    </div>
+
+    <div class="riders-item">
+      <span class="riders-number">03</span>
+      <div class="riders-text">
+        <h3>Full Support & Safety</h3>
+        <p>We provide clear guidelines, tools, and support you need to feel secure on every single trip.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button under the section -->
+  <div class="riders-button">
+    <a href="https://wa.me/1234567890" class="btn-riders">Talk to us on WhatsApp</a>
+  </div>
+</section>
+
+ <!-- Rider section ends-->
+
+ <!-- Vendor Section -->
+<section class="vendor-section">
+  <div class="riders-left">
+    <h2>Become a Rider</h2>
+    <img src="img/Frame 5.png" alt="Rider Image" class="riders-image">
+  </div>
+
+  <div class="riders-right">
+   <div class="contact-form-section">
+  <form class="contact-form" id="contact">
+    <div class="form-group">
+      <label for="name">Name of Owner</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Resturant Name</label>
+      <input type="text" id="resturantname" name="name" placeholder="Enter your email">
+    </div>
+
+    <div class="form-group">
+      <label for="Resturantaddress">Resturant Address</label>
+      <input type="text" id="address" name="address" placeholder="Enter your phone number">
+    </div>
+    
+    <div class="form-group">
+      <label for="phone">Whatsapp Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+    </div>
+
+   
+
+    <button type="submit" class="form-btn">Submit</button>
+  </form>
+</div>
+  </div>
+</section>
+
+ <!-- Rider section ends-->
+
+ <!-- Footer sections -->
+  <footer class="footer-section">
+  <div class="footer-container">
+
+    <!-- Column 1: Logo -->
+    <div class="footer-col footer-logo">
+      <img src="img/logo.png" alt="MealRush Logo" class="footer-logo-img">
+    </div>
+
+    <!-- Column 2: Legal Stuff -->
+    <div class="footer-col">
+      <h4>Legal Stuff</h4>
+      <ul>
+        <li><a href="#">Shipping & Delivery</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: About Us -->
+    <div class="footer-col">
+      <h4>About Us</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">List of Vendors</a></li>
+        <li><a href="#">Team</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Social & Contact -->
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <div class="footer-social">
+        <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+        <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+      </div>
+      <p class="footer-contact">+234 801 234 5678</p>
+      <p class="footer-location">Makurdi, Benue, Nigeria</p>
+    </div>
+
+  </div>
+</footer>
+<!-- Footer Bottom Bar -->
+<div class="footer-bottom">
+  <div class="footer-bottom-left">
+   Copyright &copy; 2025 MealRush. All Rights Reserved
+  </div>
+  <div class="footer-bottom-right">
+    <a href="#">Cookie Policy</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+</div>
+
+  <!-- Footer sections ends-->
+
+
+  <script src="script.js"></script>
+</body>
+</html>
