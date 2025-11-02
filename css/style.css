@@ -898,7 +898,7 @@ html { scroll-behavior: smooth; }
   justify-content: space-between;
   gap: 3rem;
   padding: 80px 10%;
-  background-color: #257c22; /* light yellow tone */
+  background-color: #fa520f; /* light yellow tone */
   flex-wrap: wrap;
 }
 
@@ -961,6 +961,43 @@ html { scroll-behavior: smooth; }
     margin-top: 2rem;
   }
 }
+
+@media (min-width: 350px) and (max-width: 500px) {
+  .contact-form-section {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .form-group input {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .form-btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+}
+
+
+/* vendor and forms ends here */
 
 
 .contact-form-section {
