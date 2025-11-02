@@ -485,6 +485,23 @@ html { scroll-behavior: smooth; }
   color:#3b314d
 }
 
+.why-mealrush h2 span{
+   position: relative;
+  z-index: 1; /* keeps the text above the background */
+}
+
+.why-mealrush h2 span::after{
+    content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px; /* how high the red background sits under text */
+  width: 100%;
+  height: 35%; /* covers a small part of the bottom of the text */
+  background-color: red;
+  z-index: -1; /* places background behind the text */
+  border-radius: 4px; /* optional for softer edge */
+}
+
 /* Left side */
 .why-left {
   flex: 1;
@@ -562,6 +579,23 @@ html { scroll-behavior: smooth; }
     margin-bottom: 1rem;
   }
 
+  .why-left span{
+   position: relative;
+  z-index: 1; /* keeps the text above the background */
+}
+
+.why-left span::after{
+    content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px; /* how high the red background sits under text */
+  width: 100%;
+  height: 35%; /* covers a small part of the bottom of the text */
+  background-color: #ec0b0b;
+  z-index: -1; /* places background behind the text */
+  border-radius: 4px; /* optional for softer edge */
+}
+
   .why-item {
     justify-content: center;
   }
@@ -586,6 +620,23 @@ html { scroll-behavior: smooth; }
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+.restaurants-header span{
+   position: relative;
+  z-index: 1; /* keeps the text above the background */
+}
+
+.restaurants-header span::after{
+    content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px; /* how high the red background sits under text */
+  width: 100%;
+  height: 35%; /* covers a small part of the bottom of the text */
+  background-color: #000;
+  z-index: -1; /* places background behind the text */
+  border-radius: 4px; /* optional for softer edge */
 }
 
 .restaurants-header p {
@@ -731,10 +782,21 @@ html { scroll-behavior: smooth; }
   position: relative;
 }
 
-.riders-left h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+.riders-left span{
+   position: relative;
+  z-index: 1; /* keeps the text above the background */
+}
+
+.riders-left span::after{
+    content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px; /* how high the red background sits under text */
+  width: 100%;
+  height: 35%; /* covers a small part of the bottom of the text */
+  background-color: red;
+  z-index: -1; /* places background behind the text */
+  border-radius: 4px; /* optional for softer edge */
 }
 
 .riders-left .riders-image {
@@ -828,70 +890,160 @@ html { scroll-behavior: smooth; }
 /* rider section ends*/
 
 /* form styles */
-.contact-form-section {
+/* Contact form section container and vendor styles */
+/* Rider (vendor) section */
+.vendor-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
   padding: 80px 10%;
+  background-color: #fff9d9; /* light yellow tone */
+  flex-wrap: wrap;
+}
+
+/* Left side (image + title) */
+.riders-left {
+  flex: 1;
+  text-align: center;
+}
+
+.riders-left h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.riders-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Right side (form container) */
+.riders-right {
+  flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.contact-form {
+/* Reuse your form styles */
+.contact-form-section {
   width: 100%;
   max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 }
 
+/* === Responsive === */
+@media (max-width: 900px) {
+  .vendor-section {
+    flex-direction: column; /* Stack vertically */
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .riders-left {
+    order: 1; /* Image and heading come first */
+  }
+
+  .riders-right {
+    order: 2; /* Form comes after */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-form-section {
+    width: 100%;
+    max-width: 90%; /* smaller padding on mobile */
+    margin-top: 2rem;
+  }
+}
+
+
+.contact-form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+
+}
+
+/* Actual form */
+.contact-form {
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 500px;  /* keeps it centered and not too wide */
+  margin: 0 auto;    /* centers form horizontally */
+}
+
+/* Each input group */
 .form-group {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 1.2rem;
 }
 
+/* Label styling */
 .form-group label {
-  font-weight: 300;
-  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 100;
+  margin-bottom: 0.4rem;
   color: #fff;
 }
 
-.form-group input,
-.form-group textarea {
-  padding: 0.75rem 1rem;
+/* Input fields */
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.2s ease;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #F84703; /* highlight on focus */
+.form-group input:focus {
+  border-color: #fa520f;
+  box-shadow: 0 0 4px rgba(250, 82, 15, 0.3);
 }
 
+/* ✅ Submit button */
 .form-btn {
-  background-color: #161514;
+  display: block;
+  margin: 0 auto;         /* center horizontally */
+  background-color: #000;
   color: #fff;
-  padding: 0.8rem 2rem;
   border: none;
-  border-radius: 12px;
+  padding: 0.5rem 2rem;   /* controls size */
+  border-radius: 8px;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: fit-content;     /* makes button only as wide as text */
+  transition: background 0.3s ease;
 }
 
 .form-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  background-color: #383535;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* ✅ Responsive mobile styling */
+@media (max-width: 768px) {
+  .contact-form-section {
+    padding: 40px 15px;
+  }
+
   .contact-form {
-    max-width: 100%;
-    gap: 1rem;
+    padding: 25px;
+    margin: 0 auto;
+  }
+
+  .form-btn {
+    padding: 0.4rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
+
 
 /*form styles ends */
 
