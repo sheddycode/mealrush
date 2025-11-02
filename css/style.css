@@ -12,6 +12,12 @@
     font-family: "Poppins", sans-serif;
   }
 
+  html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
   :root {
     --gray: #666;
       --scarlet: #ff4b5c;
@@ -563,41 +569,39 @@ html { scroll-behavior: smooth; }
 
 /* why mealrush styles ends */
 
-/* resturants and bukas styles */
-.for-restaurants {
-  background-color: #ff7a00; /* orange background */
-  padding: 80px 10%;
-  color: #000;
-}
-
-/* Section header */
-.for-restaurants .section-header {
+/* Section container */
+.restaurants-section {
+  background-color: #fa520f; /* orange background */
+  padding: 60px 20px;
   text-align: center;
-  margin-bottom: 60px;
 }
 
-.for-restaurants .section-header h2 {
-  font-size: 2.5rem;
+/* White text header */
+.restaurants-header {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.restaurants-header h2 {
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.for-restaurants .section-header p {
-  font-size: 1.1rem;
-  max-width: 600px;
+.restaurants-header p {
+  font-size: 1rem;
+  max-width: 700px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
-
-
-/* Individual card */
+/* Cards layout */
 .cards-container {
   display: flex;
   gap: 2rem;
   justify-content: center;
-  align-items: center; /* vertically center cards relative to each other */
+  align-items: center;
   flex-wrap: wrap;
-  background-color:#fa520f;
   padding: 30px;
 }
 
@@ -608,17 +612,17 @@ html { scroll-behavior: smooth; }
   padding: 20px;
   max-width: 300px;
   flex: 1 1 250px;
-  text-align: center; /* center text */
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* Middle card taller top and bottom */
+/* Taller middle card */
 .card-tall {
-  padding-top: 50px;   /* extra space on top */
-  padding-bottom: 50px; /* extra space on bottom */
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 /* Card images */
@@ -651,45 +655,41 @@ html { scroll-behavior: smooth; }
   cursor: pointer;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .cards-container {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
   }
 
   .card-tall {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-
-  .card {
-    max-width: 90%;
-  }
 }
 
-/* partner button */
-/* Buttons container under the cards */
+/* Buttons under cards */
 .cards-buttons {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 40px; /* space above buttons */
-  flex-wrap: wrap;  /* allow wrapping on small screens */
+  margin-top: 40px;
+  flex-wrap: wrap;
 }
 
-/* Individual buttons */
 .card-btn {
-  background-color: #fff;       /* same as cards */
-  color: #0c0c0b;               /* orange text for contrast */
-  padding: 0.2rem 1.8rem;       /* button size */
+  background-color: #fff;
+  color: #0c0c0b;
+  padding: 0.6rem 1.8rem;
   border-radius: 12px;
   font-weight: 600;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   min-width: 150px;
   text-align: center;
-  display: inline-block;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
@@ -703,11 +703,10 @@ html { scroll-behavior: smooth; }
   .cards-buttons {
     flex-direction: column;
     gap: 1rem;
-    align-items: center;
   }
 
   .card-btn {
-    padding: 0.7rem 1.5rem;
+    padding: 0.5rem 1rem;
     min-width: 120px;
   }
 }
