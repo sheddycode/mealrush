@@ -1038,6 +1038,10 @@ html { scroll-behavior: smooth; }
     margin: 0 auto;
   }
 
+  .form-group input{
+    width: 100%;
+  }
+
   .form-btn {
     padding: 0.4rem 1.5rem;
     font-size: 0.9rem;
