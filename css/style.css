@@ -1030,20 +1030,25 @@ html { scroll-behavior: smooth; }
 /* ✅ Responsive mobile styling */
 @media (max-width: 768px) {
   .contact-form-section {
-    padding: 40px 15px;
+    width: 100%;
+    padding: 0 15px; /* small padding for spacing */
   }
 
   .contact-form {
     width: 100%;
-    padding: 25px;
-    margin: 0 auto;
+    max-width: 100%;
   }
 
-   .form-group input,
+  .form-group {
+    width: 100%;
+  }
+
+  .form-group input,
   .form-group textarea,
   .form-group select {
-    width: 100%;
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block;
     box-sizing: border-box;
   }
 
