@@ -474,7 +474,7 @@ html { scroll-behavior: smooth; }
  
 
 /* why mealRush */
-.why-mealrush {
+.whychoose-mealrush {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -487,7 +487,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* Heading */
-.why-heading {
+.whychoose-heading {
   width: 100%;
   font-size: 2rem;
   font-weight: 700;
@@ -495,12 +495,16 @@ html { scroll-behavior: smooth; }
   text-align: left;
 }
 
-.why-heading span {
+.whychoose-left h2{
+  margin: 2rem;
+}
+
+.whychoose-left h2 span {
   position: relative;
   z-index: 1;
 }
 
-.why-heading span::after {
+.whychoose-left h2 span::after {
   content: "";
   position: absolute;
   left: 0;
@@ -513,12 +517,15 @@ html { scroll-behavior: smooth; }
 }
 
 /* Left side (image) */
-.why-left {
+.whychoose-left {
   flex: 1;
   text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
-.why-image {
+.whychoose-image {
   width: 100%;
   max-width: 400px;
   border-radius: 16px;
@@ -526,7 +533,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* Right side (numbered list) */
-.why-right {
+.whychoose-right {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -534,13 +541,13 @@ html { scroll-behavior: smooth; }
 }
 
 /* Numbered item */
-.why-item {
+.whychoose-item {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
 }
 
-.why-number {
+.whychoose-number {
   font-size: 3rem;
   font-weight: 800;
   color: transparent;
@@ -550,14 +557,14 @@ html { scroll-behavior: smooth; }
   line-height: 1;
 }
 
-.why-text h3 {
+.whychoose-text h3 {
   font-size: 1.2rem;
   font-weight: 700;
   color: #000;
   margin-bottom: 0.3rem;
 }
 
-.why-text p {
+.whychoose-text p {
   font-size: 1rem;
   color: #555;
   line-height: 1.5;
@@ -565,7 +572,7 @@ html { scroll-behavior: smooth; }
 
 /* ✅ Responsive (mobile view) */
 @media (max-width: 900px) {
-  .why-mealrush {
+  .whychoose-mealrush {
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -573,31 +580,166 @@ html { scroll-behavior: smooth; }
   }
 
   /* Heading moves above the image */
-  .why-heading {
+  .whychoose-heading {
     order: -2;
     text-align: center;
     margin-bottom: 1rem;
   }
 
-  .why-left {
+  .whychoose-left {
     order: -1;
     margin-bottom: 1.5rem;
   }
 
-  .why-right {
+  .whychoose-right {
     order: 0;
     width: 100%;
     align-items: center;
   }
 
-  .why-item {
+  .whychoose-item {
     justify-content: center;
     text-align: left;
   }
 }
-
-
 /* why mealrush styles ends */
+
+/*How mealrush works styles */
+.how-mealrush{
+   display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 100px 10%;
+  flex-wrap: wrap;
+  background-color: #faf3f3;
+  color: #3b314d;
+  text-align: left;
+}
+
+.how-heading{
+   width: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.how-mealrush h2{
+  margin: 2rem;
+}
+
+.how-mealrush h2 span {
+  position: relative;
+  z-index: 1;
+}
+
+.how-mealrush h2 span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 35%;
+  background-color: red;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+
+.how-left {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.how-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Right side (numbered list) */
+.how-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Numbered item */
+.how-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.how-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.how-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #3b314d;
+  text-stroke: 1.5px #3b314d;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.how-text h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.3rem;
+}
+
+.how-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ✅ Responsive (mobile view) */
+@media (max-width: 900px) {
+  .how-mealrush {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 60px 20px;
+  }
+
+  /* Heading moves above the image */
+  .how-heading {
+    order: -2;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .how-left {
+    order: -1;
+    margin-bottom: 1.5rem;
+  }
+
+  .how-right {
+    order: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .how-item {
+    justify-content: center;
+    text-align: left;
+  }
+}
+/*How mealrush works styles ends*/
+
 
 /* Section container */
 .restaurants-section {
@@ -778,7 +920,7 @@ html { scroll-behavior: smooth; }
 /* partner button styoles*/
 
 /* Riders Section */
-.riders-section {
+.become-section {
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -790,23 +932,24 @@ html { scroll-behavior: smooth; }
 
 /* Left side */
 
-.riders-left {
+.become-left {
   flex: 1;
   text-align: center;
   position: relative;
 }
 
-.rider-left h3{
-  font-size: 2rem;
-  color:#000;
+.become-left h3{
+ font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.riders-left h3 span{
+.become-left h3 span{
    position: relative;
   z-index: 1; /* keeps the text above the background */
 }
 
-.riders-left h3 span::after{
+.become-left h3 span::after{
   content: "";
   position: absolute;
   left: 0;
@@ -818,7 +961,7 @@ html { scroll-behavior: smooth; }
   border-radius: 4px; /* optional for softer edge */
 }
 
-.riders-left .riders-image {
+.become-left .riders-image {
   width: 100%;
   max-width: 400px;
   border-radius: 16px;
@@ -826,7 +969,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* Right side */
-.riders-right {
+.become-right {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -834,7 +977,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* Riders section number color fix */
-.riders-right .riders-number {
+.become-right .become-number {
   font-size: 3rem;
   font-weight: 800;
   color: transparent !important;          /* ensure transparent fill */
@@ -845,7 +988,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* Each numbered item */
-.riders-item {
+.become-item {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
@@ -853,27 +996,27 @@ html { scroll-behavior: smooth; }
 
 
 /* Text beside number */
-.riders-text h3 {
+.become-text h3 {
   font-size: 1.2rem;
   font-weight: 700;
   color: #000;
   margin-bottom: 0.3rem;
 }
 
-.riders-text p {
+.become-text p {
   font-size: 1rem;
   color: #555;
   line-height: 1.5;
 }
 
 /* Button under section */
-.riders-button {
+.become-button {
   width: 100%;
   text-align: center;
   margin-top: 40px;
 }
 
-.btn-riders {
+.become-riders {
   background-color: #F84703; /* scarlet */
   color: #fff;
   text-decoration: none;
@@ -885,29 +1028,29 @@ html { scroll-behavior: smooth; }
   box-shadow: 0 6px 20px rgba(0,0,0,0.18);
 }
 
-.btn-riders:hover {
+.become-riders:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .riders-section {
+  .become-section {
     flex-direction: column;
     text-align: center;
   }
 
-  .riders-left {
+  .become-left {
     order: -1; /* image first on mobile */
     margin-bottom: 1.5rem;
   }
 
-  .riders-item {
+  .become-item {
     justify-content: center;
     text-align: left; /* keep text aligned for readability */
   }
 
-  .why-text{
+  .become-text{
     justify-content: center;
     text-align: left; /* keep text aligned for readability */
 }
