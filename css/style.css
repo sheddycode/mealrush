@@ -474,6 +474,9 @@ html { scroll-behavior: smooth; }
  
 
 /* why mealRush */
+/* ==============================
+   WHY CHOOSE MEALRUSH SECTION
+   ============================== */
 .whychoose-mealrush {
   display: flex;
   align-items: flex-start;
@@ -486,22 +489,24 @@ html { scroll-behavior: smooth; }
   text-align: left;
 }
 
-/* Heading */
-.whychoose-heading {
-  width: 100%;
+/* Left side (image + heading) */
+.whychoose-left {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.whychoose-left h2 {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 2rem;
-  text-align: left;
-}
-
-.whychoose-left h2{
-  margin: 2rem;
-}
-
-.whychoose-left h2 span {
   position: relative;
-  z-index: 1;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.whychoose-left h2 span{
+   position: relative;
+  z-index: 1; /* keeps the text above the background */
 }
 
 .whychoose-left h2 span::after {
@@ -514,15 +519,6 @@ html { scroll-behavior: smooth; }
   background-color: red;
   z-index: -1;
   border-radius: 4px;
-}
-
-/* Left side (image) */
-.whychoose-left {
-  flex: 1;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
 }
 
 .whychoose-image {
@@ -544,17 +540,22 @@ html { scroll-behavior: smooth; }
 .whychoose-item {
   display: flex;
   align-items: flex-start;
-  gap: 1.5rem;
+  gap: 1rem;
+  justify-content: flex-start;
 }
 
 .whychoose-number {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: transparent;
   -webkit-text-stroke: 1.5px #3b314d;
   text-stroke: 1.5px #3b314d;
   flex-shrink: 0;
   line-height: 1;
+}
+
+.whychoose-text {
+  text-align: left;
 }
 
 .whychoose-text h3 {
@@ -570,43 +571,36 @@ html { scroll-behavior: smooth; }
   line-height: 1.5;
 }
 
-/* ✅ Responsive (mobile view) */
+/* Responsive */
 @media (max-width: 900px) {
   .whychoose-mealrush {
     flex-direction: column;
-    text-align: center;
     align-items: center;
+    text-align: center;
     padding: 60px 20px;
   }
 
-  /* Heading moves above the image */
-  .whychoose-heading {
-    order: -2;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .whychoose-left {
-    order: -1;
-    margin-bottom: 1.5rem;
-  }
-
+  .whychoose-left,
   .whychoose-right {
-    order: 0;
     width: 100%;
-    align-items: center;
   }
 
   .whychoose-item {
     justify-content: center;
+    width: 100%;
+  }
+
+  .whychoose-text {
     text-align: left;
+    max-width: 300px;
   }
 }
-/* why mealrush styles ends */
 
-/*How mealrush works styles */
-.how-mealrush{
-   display: flex;
+/* ==============================
+   HOW MEALRUSH WORKS SECTION
+   ============================== */
+.how-mealrush {
+  display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
@@ -617,26 +611,23 @@ html { scroll-behavior: smooth; }
   text-align: left;
 }
 
-.how-heading{
+/* Heading */
+.how-heading {
   width: 100%;
-  align-items: center;            /* make it take full width */
-  text-align: center;      /* center the text */
   font-size: 2rem;
   font-weight: 700;
-  margin: 0 0 2rem 0;
-  display: block;          /* ensure it's block-level */
-}
-
-.how-mealrush h2{
-  margin: 2rem;
-}
-
-.how-heading  span {
+  text-align: center;
+  margin-bottom: 2rem;
   position: relative;
-  z-index: 1;
+  display: block;
 }
 
-.how-heading span::after {
+.how-mealrush h2 span{
+   position: relative;
+  z-index: 1; /* keeps the text above the background */
+}
+
+.how-mealrush h2 span::after {
   content: "";
   position: absolute;
   left: 0;
@@ -648,13 +639,10 @@ html { scroll-behavior: smooth; }
   border-radius: 4px;
 }
 
-
+/* Left side (image) */
 .how-left {
   flex: 1;
   text-align: center;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
 }
 
 .how-image {
@@ -676,23 +664,24 @@ html { scroll-behavior: smooth; }
 .how-item {
   display: flex;
   align-items: flex-start;
-  gap: 1.5rem;
-}
-
-.how-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
+  gap: 1rem;
+  justify-content: flex-start; /* numbers aligned left */
+  width: 100%;
 }
 
 .how-number {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: transparent;
   -webkit-text-stroke: 1.5px #3b314d;
   text-stroke: 1.5px #3b314d;
   flex-shrink: 0;
   line-height: 1;
+}
+
+.how-text {
+  text-align: left;
+  max-width: 300px;
 }
 
 .how-text h3 {
@@ -708,47 +697,52 @@ html { scroll-behavior: smooth; }
   line-height: 1.5;
 }
 
-/* ✅ Responsive (mobile view) */
+/* Responsive */
 @media (max-width: 900px) {
- .how-mealrush {
+  .how-mealrush {
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 60px 20px;
   }
 
-  /* Heading moves above the image */
- .how-heading {
-    order: -1;  
-    align-self: center;          /* appear first */
+  .how-heading {
+    order: -1;
     margin-bottom: 1.5rem;
+    text-align: center;
   }
 
- .how-left {
-     order: 0;
-    width: 100%;              /* full width on mobile */
-    text-align: center;       /* center the image itself */
+  .how-left {
+    order: 0;
+    width: 100%;
     margin-bottom: 1.5rem;
   }
 
   .how-right {
-     order: 1;
+    order: 1;
     width: 100%;
-    align-items: center;
-    text-align: left;         /* numbers aligned left */
-    max-width: 500px; 
+    align-items: center; /* centers number+text block */
   }
 
-.how-image{
-   width: 80%;               /* scale image down for mobile */
-    max-width: 400px;
-}
   .how-item {
-    justify-content: flex-start;
-    text-align: left;
-    width: 100%;
+    justify-content: center;
+    text-align: left; /* keeps text beside number left-aligned */
+  }
+
+  .how-number {
+    font-size: 2rem; /* smaller number on mobile */
+  }
+
+  .how-image {
+    width: 80%; /* scale image */
+    max-width: 400px;
+  }
+
+  .how-text {
+    max-width: 300px; /* optional, keeps text block narrow */
   }
 }
+
 /*How mealrush works styles ends*/
 
 
