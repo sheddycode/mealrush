@@ -955,7 +955,7 @@ html { scroll-behavior: smooth; }
 .form-group label {
   display: block;
   text-align: left; /* ✅ left-aligned labels */
-  font-weight: 500;
+  font-weight: 200;
   margin-bottom: 0.4rem;
   color: #fff;
 }
@@ -1030,7 +1030,7 @@ html { scroll-behavior: smooth; }
   }
 }
 
-/* 💻 From 690px upward → side by side */
+/* From 690px upward → side by side */
 @media (min-width: 690px) {
   .vendor-section {
     flex-direction: row;
@@ -1183,7 +1183,7 @@ html { scroll-behavior: smooth; }
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: 700;
-  color: #ff7a00; /* orange highlight */
+  color: #000; /* orange highlight */
 }
 
 /* Lists */
