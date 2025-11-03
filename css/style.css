@@ -547,6 +547,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* Text beside number */
+
 .why-text h3 {
   font-size: 1.2rem;
   font-weight: 700;
@@ -909,6 +910,11 @@ html { scroll-behavior: smooth; }
     justify-content: center;
     text-align: left; /* keep text aligned for readability */
   }
+
+  .why-text{
+    justify-content: center;
+    text-align: left; /* keep text aligned for readability */
+}
 }
 /* Become a  rider section ends*/
 
