@@ -618,23 +618,24 @@ html { scroll-behavior: smooth; }
 }
 
 .how-heading{
-   width: 100%;
+  width: 100%;            /* make it take full width */
+  text-align: center;      /* center the text */
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 2rem;
-  text-align: center;
+  margin: 0 0 2rem 0;
+  display: block;          /* ensure it's block-level */
 }
 
 .how-mealrush h2{
   margin: 2rem;
 }
 
-.how-mealrush h2 span {
+.how-heading  span {
   position: relative;
   z-index: 1;
 }
 
-.how-mealrush h2 span::after {
+.how-heading span::after {
   content: "";
   position: absolute;
   left: 0;
@@ -708,35 +709,34 @@ html { scroll-behavior: smooth; }
 
 /* ✅ Responsive (mobile view) */
 @media (max-width: 900px) {
-  .how-mealrush {
+ .how-mealrush {
     flex-direction: column;
-    text-align: center;
     align-items: center;
+    text-align: center;
     padding: 60px 20px;
   }
 
   /* Heading moves above the image */
-  .how-heading {
-    order: -2;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-
-  }
-
-  .how-left {
-    order: -1;
+ .how-heading {
+    order: -1;            /* appear first */
     margin-bottom: 1.5rem;
   }
 
+ .how-left {
+    order: 0;             /* image comes after heading */
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
   .how-right {
-    order: 0;
+    order: 1;             /* numbers below image */
     width: 100%;
     align-items: center;
   }
 
+
   .how-item {
-    justify-content: center;
+    justify-content: flex-start;
     text-align: left;
   }
 }
