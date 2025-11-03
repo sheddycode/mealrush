@@ -618,7 +618,8 @@ html { scroll-behavior: smooth; }
 }
 
 .how-heading{
-  width: 100%;            /* make it take full width */
+  width: 100%;
+  align-items: center;            /* make it take full width */
   text-align: center;      /* center the text */
   font-size: 2rem;
   font-weight: 700;
@@ -718,26 +719,34 @@ html { scroll-behavior: smooth; }
 
   /* Heading moves above the image */
  .how-heading {
-    order: -1;            /* appear first */
+    order: -1;  
+    align-self: center;          /* appear first */
     margin-bottom: 1.5rem;
   }
 
  .how-left {
-    order: 0;             /* image comes after heading */
+     order: 0;
+    width: 100%;              /* full width on mobile */
+    text-align: center;       /* center the image itself */
     margin-bottom: 1.5rem;
-    width: 100%;
   }
 
   .how-right {
-    order: 1;             /* numbers below image */
+     order: 1;
     width: 100%;
     align-items: center;
+    text-align: left;         /* numbers aligned left */
+    max-width: 500px; 
   }
 
-
+.how-image{
+   width: 80%;               /* scale image down for mobile */
+    max-width: 400px;
+}
   .how-item {
     justify-content: flex-start;
     text-align: left;
+    width: 100%;
   }
 }
 /*How mealrush works styles ends*/
