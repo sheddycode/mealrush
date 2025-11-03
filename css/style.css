@@ -476,51 +476,56 @@ html { scroll-behavior: smooth; }
 /* why mealRush */
 .why-mealrush {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
   padding: 100px 10%;
   flex-wrap: wrap;
   background-color: #faf3f3;
-  color:#3b314d
+  color: #3b314d;
+  text-align: left;
 }
 
-.why-mealrush h2 span{
-   position: relative;
-  z-index: 1; /* keeps the text above the background */
+/* Heading */
+.why-heading {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
-.why-mealrush h2 span::after{
-    content: "";
+.why-heading span {
+  position: relative;
+  z-index: 1;
+}
+
+.why-heading span::after {
+  content: "";
   position: absolute;
   left: 0;
-  bottom: 4px; /* how high the red background sits under text */
+  bottom: 4px;
   width: 100%;
-  height: 35%; /* covers a small part of the bottom of the text */
+  height: 35%;
   background-color: red;
-  z-index: -1; /* places background behind the text */
-  border-radius: 4px; /* optional for softer edge */
+  z-index: -1;
+  border-radius: 4px;
 }
 
-/* Left side */
+/* Left side (image) */
 .why-left {
   flex: 1;
-  position: relative;
   text-align: center;
 }
 
-.why-left h2 {
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-}
-
-.why-left .why-image {
+.why-image {
   width: 100%;
+  max-width: 400px;
   border-radius: 16px;
   object-fit: cover;
 }
 
-/* Right side */
+/* Right side (numbered list) */
 .why-right {
   flex: 1;
   display: flex;
@@ -528,25 +533,22 @@ html { scroll-behavior: smooth; }
   gap: 1.5rem;
 }
 
-/* Each numbered item */
+/* Numbered item */
 .why-item {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
 }
 
-/* Number style */
 .why-number {
   font-size: 3rem;
   font-weight: 800;
   color: transparent;
-  -webkit-text-stroke: 1.5px #3b314d; /* orange outline */
+  -webkit-text-stroke: 1.5px #3b314d;
   text-stroke: 1.5px #3b314d;
   flex-shrink: 0;
   line-height: 1;
 }
-
-/* Text beside number */
 
 .why-text h3 {
   font-size: 1.2rem;
@@ -561,46 +563,39 @@ html { scroll-behavior: smooth; }
   line-height: 1.5;
 }
 
-/* Responsive design */
+/* ✅ Responsive (mobile view) */
 @media (max-width: 900px) {
   .why-mealrush {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    padding: 60px 20px;
   }
 
-  /* Make the image appear first */
-  .why-left {
-    order: -1; /* image comes first on mobile */
-    margin-bottom: 1.5rem; /* space below image */
-  }
-
-  .why-left h2 {
-    position: static;
-    transform: none;
+  /* Heading moves above the image */
+  .why-heading {
+    order: -2;
+    text-align: center;
     margin-bottom: 1rem;
   }
 
-  .why-left span{
-   position: relative;
-  z-index: 1; /* keeps the text above the background */
-}
+  .why-left {
+    order: -1;
+    margin-bottom: 1.5rem;
+  }
 
-.why-left span::after{
-    content: "";
-  position: absolute;
-  left: 0;
-  bottom: 4px; /* how high the red background sits under text */
-  width: 100%;
-  height: 35%; /* covers a small part of the bottom of the text */
-  background-color: #ec0b0b;
-  z-index: -1; /* places background behind the text */
-  border-radius: 4px; /* optional for softer edge */
-}
+  .why-right {
+    order: 0;
+    width: 100%;
+    align-items: center;
+  }
 
   .why-item {
     justify-content: center;
+    text-align: left;
   }
 }
+
 
 /* why mealrush styles ends */
 
@@ -802,6 +797,7 @@ html { scroll-behavior: smooth; }
 }
 
 .rider-left h3{
+  font-size: 2rem;
   color:#000;
 }
 
