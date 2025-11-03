@@ -79,29 +79,17 @@ html { scroll-behavior: smooth; }
 }
 
 /* Desktop buttons aligned to right */
-.nav-buttons-desktop {
-  display: flex;
-  gap: 0.5rem;
-  margin-left: auto;
-}
 
 /* Button style */
-.navbtn-patner,
 .navbtn-wat {
-  padding: 0.4rem 0.9rem;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
+  display: inline-block;
+  background-color: #ff3c00; /* example color */
   border: none;
-  transition: all 0.3s ease;
-}
-
-
-/* WhatsApp button */
-.navbtn-wat {
-  background: #fa520f;
-  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap; /* keeps text on one line */
 }
 
 
