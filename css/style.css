@@ -892,17 +892,20 @@ html { scroll-behavior: smooth; }
 /* form styles */
 /* Contact form section container and vendor styles */
 /* Rider (vendor) section */
+/* ===== Vendor (Rider) Section ===== */
+/* === Become a Rider Section === */
+/* === Vendor Section (Rider Section with Form) === */
 .vendor-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
   padding: 80px 10%;
-  background-color: #fa520f; /* light yellow tone */
+  background-color: #fa520f;
   flex-wrap: wrap;
 }
 
-/* Left side (image + title) */
+/* Left side: Image + title */
 .riders-left {
   flex: 1;
   text-align: center;
@@ -923,113 +926,40 @@ html { scroll-behavior: smooth; }
   object-fit: cover;
 }
 
-/* Right side (form container) */
+/* Right side: Form container */
 .riders-right {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-/* Reuse your form styles */
+/* Form section */
 .contact-form-section {
   width: 100%;
   max-width: 500px;
 }
 
-/* === Responsive === */
-@media (max-width: 900px) {
-  .vendor-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 60px 10px; /* reduce side padding */
-    width: 100%; /* ensure full width */
-  }
-
-  .riders-left {
-    order: 1;
-    width: 100%; /* full width */
-  }
-
-  .riders-right {
-    order: 2;
-    width: 100%; /* full width */
-    display: flex;
-    justify-content: center;
-  }
-
-  .contact-form-section {
-    width: 100%;
-    max-width: 100%; /* allow full width */
-    margin-top: 2rem;
-    padding: 0; /* remove extra padding */
-  }
-
-  .contact-form {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .form-group {
-    width: 100% !important;
-    margin-bottom: 1rem;
-  }
-
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0.8rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    display: block;
-  }
-
-  .form-btn {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0.8rem;
-    border-radius: 8px;
-    font-weight: 600;
-    display: block;
-  }
-}
-
-
-/* vendor and forms ends here */
-
-
-.contact-form-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
-
-}
-
-/* Actual form */
 .contact-form {
   padding: 30px 40px;
   width: 100%;
-  max-width: 500px;  /* keeps it centered and not too wide */
-  margin: 0 auto;    /* centers form horizontally */
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-/* Each input group */
+/* Input groups */
 .form-group {
   margin-bottom: 1.2rem;
+  width: 100%;
 }
 
-/* Label styling */
 .form-group label {
   display: block;
-  font-weight: 100;
+  text-align: left; /* ✅ left-aligned labels */
+  font-weight: 500;
   margin-bottom: 0.4rem;
   color: #fff;
 }
 
-/* Input fields */
 .form-group input {
   width: 100%;
   padding: 10px 12px;
@@ -1037,6 +967,7 @@ html { scroll-behavior: smooth; }
   border-radius: 8px;
   font-size: 1rem;
   outline: none;
+  box-sizing: border-box;
 }
 
 .form-group input:focus {
@@ -1044,44 +975,49 @@ html { scroll-behavior: smooth; }
   box-shadow: 0 0 4px rgba(250, 82, 15, 0.3);
 }
 
-/* ✅ Submit button */
-.form-btn {
-  display: block;
-  margin: 0 auto;         /* center horizontally */
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 2rem;   /* controls size */
-  border-radius: 8px;
+/* Small submit button — always centered */
+.contact-form .form-btn {
+  display: inline-block;
+  width: auto;
+  min-width: 120px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
   font-weight: 600;
-  font-size: 1rem;
+  border: none;
+  background-color: #1f1d1c;
+  color: #fff;
   cursor: pointer;
-  width: fit-content;     /* makes button only as wide as text */
-  transition: background 0.3s ease;
+  text-align: center;
+  margin: 1rem auto 0 auto;
+  transition: all 0.3s ease;
 }
 
-.form-btn:hover {
+.contact-form .form-btn:hover {
   background-color: #383535;
+  transform: scale(1.05);
 }
 
-/* ✅ Responsive mobile styling */
-@media (max-width: 768px) {
+/* === Responsive Behavior === */
+
+/* 📱 Below 690px → stack image and form vertically */
+@media (max-width: 689px) {
   .vendor-section {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    text-align: center;
+    padding: 50px 20px;
   }
 
   .riders-left,
   .riders-right {
     width: 100%;
-    text-align: center;
   }
 
   .contact-form-section {
     width: 100%;
-    padding: 0 15px;
+    max-width: 100%;
+    padding: 0;
+    margin-top: 1.5rem;
   }
 
   .contact-form {
@@ -1089,35 +1025,26 @@ html { scroll-behavior: smooth; }
     max-width: 100%;
   }
 
-  .form-group {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .form-group label {
-    display: block;
-    text-align: left;
-    margin-bottom: 0.5rem;
-  }
-
   .form-group input {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0.7rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-
-  .form-btn {
-    width: 50%;
-    max-width: 50%;
-    padding: 0.8rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
+    width: 100%;
   }
 }
+
+/* 💻 From 690px upward → side by side */
+@media (min-width: 690px) {
+  .vendor-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .riders-left,
+  .riders-right {
+    flex: 1;
+  }
+}
+
+
 
 
 
