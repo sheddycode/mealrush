@@ -924,19 +924,36 @@ html { scroll-behavior: smooth; }
 }
 
 /* Left side: Image + title */
-.riders-left {
+.vendor-left {
   flex: 1;
   text-align: center;
 }
 
-.riders-left h2 {
-  font-size: 2rem;
-  font-weight: 700;
+.vendor-left h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
   margin-bottom: 1rem;
-  color: #000;
+  color: #fff;
 }
 
-.riders-image {
+.vendor-left h2 span{
+   position: relative;
+  z-index: 1; /* keeps the text above the background */
+}
+
+.vendor-left h2 span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px; /* how high the red background sits under text */
+  width: 100%;
+  height: 35%; /* covers a small part of the bottom of the text */
+  background-color: #000;
+  z-index: -1; /* places background behind the text */
+  border-radius: 4px; /* optional for softer edge */
+}
+
+.vendor-image {
   width: 100%;
   max-width: 400px;
   height: auto;
@@ -945,7 +962,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* Right side: Form container */
-.riders-right {
+.vendor-right {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -982,7 +999,7 @@ html { scroll-behavior: smooth; }
   width: 100%;
   padding: 10px 12px;
   border: 1px solid #272525;
-  border-radius: 9px;
+  border-radius: 12px;
   font-size: 1rem;
   outline: none;
   box-sizing: border-box;
