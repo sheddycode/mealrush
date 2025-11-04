@@ -426,6 +426,8 @@ html { scroll-behavior: smooth; }
   .hero-buttons .btn {
     width: 150px;
     text-align: center;
+    padding: 0.9rem;
+    border-radius: 17px;
   }
 }
 /* Headline style */
