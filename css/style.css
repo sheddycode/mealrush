@@ -240,6 +240,7 @@ html { scroll-behavior: smooth; }
   justify-content: center;
   padding: 200px 20px 80px;
   overflow: hidden;
+    transform: translateY(40px);
 }
 
 /* Full visible image */
