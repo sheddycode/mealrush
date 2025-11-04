@@ -353,6 +353,7 @@ html { scroll-behavior: smooth; }
   min-width: 120px;  /* prevent too small */
   flex: 0 0 auto;    /* prevent stretching */
   box-sizing: border-box;
+   white-space: nowrap;
 }
 
 /* Medium screens: 768px – 480px */
@@ -361,7 +362,7 @@ html { scroll-behavior: smooth; }
     padding: 0.5rem 1rem;  /* smaller padding */
     font-size: 0.85rem;    /* smaller text */
     width: auto;           /* natural width */
-    max-width: 160px;      /* shrink max width */
+    max-width: 160px;  
   }
 }
 
