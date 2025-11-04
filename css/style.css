@@ -292,6 +292,28 @@ html { scroll-behavior: smooth; }
   }
 }
 
+/* 📱 Small screens — shift hero content up slightly */
+@media (max-width: 768px) {
+  .hero-content {
+    transform: translateY(-150px); /* move up a bit */
+  }
+
+  .hero {
+    padding: 120px 20px 60px; /* reduce top/bottom padding */
+    min-height: 120vh; /* adjust height for smaller screens */
+  }
+
+  .hero-text h1 {
+    font-size: 2rem; /* scale text for mobile */
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+
 /* Force roughly 3 lines on medium screens */
 @media (min-width: 768px) {
   .hero-text h1 {
