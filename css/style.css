@@ -295,7 +295,7 @@ html { scroll-behavior: smooth; }
 /* 📱 Small screens — shift hero content up slightly */
 @media (max-width: 768px) {
   .hero-content {
-    transform: translateY(-190px); /* move up a bit */
+    transform: translateY(-170px); /* move up a bit */
   }
 
   .hero {
