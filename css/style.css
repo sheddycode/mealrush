@@ -424,7 +424,7 @@ html { scroll-behavior: smooth; }
   }
 
   .hero-buttons .btn {
-    width: 100%;
+    width: 150px;
     text-align: center;
   }
 }
