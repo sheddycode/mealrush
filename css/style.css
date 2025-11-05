@@ -294,7 +294,7 @@ html { scroll-behavior: smooth; }
   color: #fff;
   text-decoration: none;
   padding: 0.9rem 1.8rem;   /* enough horizontal padding */
-  border-radius: 17px;
+  border-radius: 20px;
   font-weight: 600;
   font-size: 1rem;
   text-align: center;
@@ -303,6 +303,7 @@ html { scroll-behavior: smooth; }
   width: auto;              /* let button expand with text */
   max-width: 100%;          /* don't exceed container width */
   box-sizing: border-box;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* ----------- RESPONSIVE ----------- */
