@@ -356,6 +356,35 @@ html { scroll-behavior: smooth; }
   }
 
 }
+@media (max-width: 320px) {
+  .hero-content {
+    top: 70px;              /* push content below the navbar */
+    left: 50%;
+    transform: translateX(-50%); /* horizontal centering only */
+    position: absolute;      /* keep absolute positioning */
+    width: 90%;
+    max-width: 280px;
+    z-index: 2;
+  }
+
+  .hero-text h1 {
+    font-size: 1.3rem;      /* shrink text for tiny screen */
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 0.85rem;
+  }
+
+  .hero-buttons .btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    width: 100%;            /* optional: full width buttons */
+  }
+}
+
+
+
 /* Headline style */
 .poppins-regular-hero {
   font-family: 'Poppins', sans-serif;
