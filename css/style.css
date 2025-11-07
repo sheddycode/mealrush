@@ -61,15 +61,18 @@ html { scroll-behavior: smooth; }
  /* Navbar layout */
 /* Navbar base */
 .navbar {
+  position: fixed;        /* makes it stick to the viewport */
+  top: 0;                 /* aligns it at the very top */
+  left: 0;
+  width: 100%;            /* spans full width */
+  z-index: 1000;   
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #fff;
   padding: 0.8rem 1.2rem;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+
 }
 
 /* Logo */
@@ -326,6 +329,8 @@ html { scroll-behavior: smooth; }
     min-height: 600px;
     padding-top: 100px;       /* keeps text below navbar */
     overflow: hidden;
+    object-fit: center;
+    object-position: center top;
   }
 
   .hero-bg {
