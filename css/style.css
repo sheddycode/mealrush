@@ -241,15 +241,10 @@ html { scroll-behavior: smooth; }
   overflow: hidden;
   margin: 0 !important;          /* remove any external margin */
   padding: 0 !important;         /* remove internal padding */
-  height: 100vh !important;
+  height: 1300px !important;
 }
 
-@media (min-height: 1024px){
 
-.hero-content {
-    transform: translate(-50%, -80%); /* moves content upward */
-  }
-}
 
 /* Hero image fills the container fully */
 .hero-bg {
@@ -259,19 +254,21 @@ html { scroll-behavior: smooth; }
   z-index: 0;
    display: block !important;     /* removes inline image gaps */
   width: 100% !important;
-  height: 100% !important;       /* make image fill hero */
+  height: 1300px !important;       /* make image fill hero */
   object-fit: cover !important;  /* fill the section cleanly */
-  object-position: center bottom !important;
+  object-position: center !important;
 }
 
 
 
 /* Hero content inside the image */
 .hero-content {
-   position: absolute;
-  top: 50%;
+  position: absolute;
+  top: 20%;
   left: 50%;
-  transform: translate(-50%, -50%);
+ transform: translateX(-50%); /* centers horizontally */
+  width: 90%;                  /* responsive width */
+  max-width: 800px;            /* limit width on large screens */
   text-align: center;
   z-index: 1;
   color: #000;
@@ -321,12 +318,22 @@ html { scroll-behavior: smooth; }
 
 /* ================= Responsive ================= */
 @media (max-width: 1024px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
+  .hero-content {
+    top: 10%;
   }
 
-  .hero-content p {
-    font-size: 1.1rem;
+  
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    top: 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    top: 15%;
   }
 }
 
@@ -334,7 +341,7 @@ html { scroll-behavior: smooth; }
   .hero {
     position: relative;
     width: 100%;
-    height:100vh;
+    height:150vh;
     overflow: hidden;      /* Hide any stray space */
     margin: 0;
     padding: 0;
@@ -349,7 +356,7 @@ html { scroll-behavior: smooth; }
     width: 90%;
     text-align: center;
      position: absolute;
-    top: 40%;               /* Move upward a bit */
+    top: 50%;               /* Move upward a bit */
     left: 50%;
     z-index: 2;
     
