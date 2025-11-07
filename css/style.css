@@ -424,6 +424,11 @@ html { scroll-behavior: smooth; }
     width: 90%;
     text-align: center;
   }
+  
+  .hero-bg{
+    height: 70%;
+    object-fit:cover;
+  }
 
   .hero-content h1 {
     font-size: 1.8rem;
@@ -440,9 +445,10 @@ html { scroll-behavior: smooth; }
 }
 
 @media (max-width: 480px) {
-  .hero-inner {
-    padding-top: calc(90% + 60px); /* tiny screens */
-  }
+.hero-bg{
+  height: 60%;
+  object-fit:cover;
+}
   .hero-content h1 {
     font-size: 1.5rem;
   }
