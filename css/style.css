@@ -237,7 +237,7 @@ html { scroll-behavior: smooth; }
 .hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 150vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -330,7 +330,7 @@ html { scroll-behavior: smooth; }
  .hero {
     position: relative;
     display: block;           /* override flex to stack content */
-    height: 100vh;            /* full viewport height */
+    height: 150vh;            /* full viewport height */
     min-height: 600px;
     padding-top: 100px;       /* keeps text below navbar */
     overflow: hidden;
