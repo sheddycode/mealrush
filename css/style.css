@@ -235,25 +235,25 @@ html { scroll-behavior: smooth; }
 
 /* Hero section */
 .hero {
-  position: relative;
+   position: relative;
   width: 100%;
-  min-height: 150vh;
+  height: 200vh; /* keep tall hero */
   display: flex;
-  align-items: center;
+  align-items: flex-start;  /* start from top to avoid extra space */
   justify-content: center;
-  padding: 120px 20px 80px; /* ensures content below navbar */
   overflow: hidden;
+  padding-top: 100px;       /* space from navbar */
 }
 
 /* Background image fills hero nicely */
 .hero-bg {
-  position: absolute;
+ position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* fills hero area */
-  object-position: center; /* keeps focus centered */
+  object-fit: cover;          /* fill without leaving extra space */
+  object-position: top;       /* top aligned, bottom visible */
   z-index: 0;
 }
 
@@ -268,13 +268,12 @@ html { scroll-behavior: smooth; }
 
 /* Hero content sits above the image */
 .hero-content {
-  position: relative;
+   position: relative;
   z-index: 1;
   text-align: center;
-  color: white;
-  color:#000;
-  transform:translateY(-180px);
+  color: #000;
   max-width: 800px;
+  margin-top: 40px; 
 }
 
 /* TITLE STYLE */
@@ -332,7 +331,7 @@ html { scroll-behavior: smooth; }
  .hero {
     position: relative;
     display: block;           /* override flex to stack content */
-    height: 150vh;            /* full viewport height */
+    height: 200vh;            /* full viewport height */
     min-height: 600px;
     padding-top: 100px;       /* keeps text below navbar */
     overflow: hidden;
@@ -357,8 +356,9 @@ html { scroll-behavior: smooth; }
     text-align: center;
     color: #000;
     padding: 1rem 1.5rem;
-    margin-top: 0;
+    margin-top: 70px;
     transform: none;
+    
   }
 
   .hero-text h1 {
