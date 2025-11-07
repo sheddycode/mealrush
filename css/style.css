@@ -325,87 +325,89 @@ html { scroll-behavior: smooth; }
   
 }
 
-@media (max-width: 768px) {
-  .hero-content {
-    top: 20%;
-  }
-}
 
-@media (max-width: 480px) {
-  .hero-content {
-    top: 15%;
-  }
-}
 
+/* --------------------------
+   Small screens (tablet / phone)
+   -------------------------- */
+/* Fix hero spacing and height on small screens */
 @media (max-width: 768px) {
   .hero {
     position: relative;
     width: 100%;
-    height:150vh;
-    overflow: hidden;      /* Hide any stray space */
-    margin: 0;
+    height: 90vh;              /* make the hero fill most of the screen */
     padding: 0;
-    background-color: #fff; /* Match background, remove gray band */
+    margin: 0;
+    overflow: hidden;          /* remove any extra space */
   }
 
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;              /* image now fills hero height */
+    object-fit: cover;         /* fills container without gaps */
+    object-position: center;
+  }
 
   .hero-content {
-      /* move content further upward on small screens */
-    transform: translate(-50%, -50%);
-    max-width: 90%;
-    width: 90%;
-    text-align: center;
-     position: absolute;
-    top: 50%;               /* Move upward a bit */
+    position: absolute;
+    top: 20%;                  /* shift upward */
     left: 50%;
-    z-index: 2;
-    
-  }
-  
-  .hero-bg{
-     position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;           /* fill entire hero */
-  object-fit: cover;      /* ensure full coverage */
-  object-position: center;
-  z-index: 0;
-    
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
   }
 
-  .hero-content h1 {
-    font-size: 1.8rem;
+  .hero-text h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
   }
 
-  .hero-content p {
-    font-size: 1rem;
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+ .hero-buttons {
+    display: flex;
+    flex-direction: column;  /* stack vertically */
+    align-items: center;     /* center them horizontally */
+    gap: 0.75rem;            /* space between buttons */
   }
 
   .hero-buttons .btn {
-    width: 80%;
-    max-width: 250px;
+    width: 80%;              /* make them nicely wide but not full */
+    max-width: 250px;        /* optional limit */
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
-.hero-bg{
-  height: 60%;
-  object-fit:cover;
-}
-  .hero-content h1 {
-    font-size: 1.5rem;
+  .hero {
+    height: 100vh;             /* taller for small screens */
   }
 
-  .hero-content p {
-    font-size: 0.9rem;
+  .hero-bg {
+    height: 100%;              /* keep full height coverage */
+    object-fit: cover;         /* no white borders */
   }
 
-  .hero-buttons .btn {
-    width: 90%;
-    padding: 0.7rem 1.5rem;
+  .hero-content {
+    top: 18%;                  /* slightly higher */
+  }
+
+  .hero-text h1 {
+    font-size: 1.3rem;
+  }
+.hero-buttons .btn {
+    width: 90%;              /* a bit wider on very small screens */
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
   }
 }
+
 
 /* Optional: red highlight span */
 .red {
