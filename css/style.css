@@ -233,64 +233,67 @@ html { scroll-behavior: smooth; }
 
 
 
-/* Hero section */
+
+/* Hero image fills the container */
 .hero {
-   position: relative;
+  position: relative;
   width: 100%;
-  height: 200vh; /* keep tall hero */
-  display: flex;
-  align-items: flex-start;  /* start from top to avoid extra space */
-  justify-content: center;
+  height: 200vh; /* or desired height */
+  min-height: 600px;
   overflow: hidden;
-  padding-top: 100px;       /* space from navbar */
 }
 
-/* Background image fills hero nicely */
+/* Hero image fills the container fully */
 .hero-bg {
- position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;          /* fill without leaving extra space */
-  object-position: top;       /* top aligned, bottom visible */
+  object-fit: cover;       /* fill the hero */
+  object-position: top;    /* keep top visible */
   z-index: 0;
 }
 
-/* Overlay for better text visibility */
+/* Optional overlay for contrast */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 0;
-}
-
-/* Hero content sits above the image */
-.hero-content {
-   position: relative;
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
-  text-align: center;
-  color: #000;
-  max-width: 800px;
-  margin-top: 40px; 
 }
 
-/* TITLE STYLE */
+/* Hero content inside the image */
+.hero-content {
+  position: absolute;
+  top: 50%;                /* vertical center */
+  left: 50%;               /* horizontal center */
+  transform: translate(-50%, -50%); /* center both axes */
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  width: 90%;
+  padding-top: 50px;       /* space from navbar */
+  box-sizing: border-box;
+}
+
+/* Text styles */
 .hero-text h1 {
   font-size: 3rem;
   font-weight: 800;
   line-height: 1.3;
   margin-bottom: 1rem;
+  color: #000;
 }
 
-/* PARAGRAPH */
 .hero-text p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
+  color: #000;
 }
 
-/* BUTTONS */
+/* Buttons */
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -299,125 +302,169 @@ html { scroll-behavior: smooth; }
 }
 
 .hero-buttons .btn {
-   background-color: #fa520f;
+  background-color: #fa520f;
   color: #fff;
   text-decoration: none;
-  padding: 0.9rem 1.8rem;   /* enough horizontal padding */
-  border-radius: 30px;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
   text-align: center;
-  white-space: nowrap;      /* keep text in one line */
-  display: inline-block;    /* ensures background wraps text */
-  width: auto;              /* let button expand with text */
-  max-width: 100%;          /* don't exceed container width */
-  box-sizing: border-box;
+  white-space: nowrap;
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* ----------- RESPONSIVE ----------- */
+/* ---------------- RESPONSIVE ---------------- */
 
-/* Medium screens (tablet) */
-@media (max-width: 1024px) {
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
+/* Mobile and small screens */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 150vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 200px 20px 80px;
+  overflow: hidden;
+}
+
+/* Hero image */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* fills container */
+  object-position: bottom;    /* show bottom of image */
+  z-index: 0;
+}
+
+/* Optional overlay for text contrast */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+/* Hero content */
+.hero-content {
+  position: absolute;       /* absolute positioning over the image */
+  top: 30%;                 /* vertical center */
+  left: 50%;                /* horizontal center */
+  transform: translate(-50%, -50%); /* truly center both axes */
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  width: 90%;
+  color: black;
+}
+
+/* Heading */
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.red {
+  background-color: #fa520f;
+}
+
+/* Paragraph */
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-buttons .btn {
+  background-color: #fa520f;
+  color: #fff;
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 
-/* Small screens (mobile) */
-/* Mobile / small screens */
+/* ================= Responsive ================= */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 768px) {
- .hero {
-    position: relative;
-    display: block;           /* override flex to stack content */
-    height: 200vh;            /* full viewport height */
-    min-height: 600px;
-    padding-top: 100px;       /* keeps text below navbar */
-    overflow: hidden;
-    object-fit: center;
-    object-position: center top;
-  }
-
-  .hero-bg {
-    position: absolute;       /* make image background */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;        /* fills entire hero area */
-     /* centers the image focus */
-    z-index: 0;
-  }
-
   .hero-content {
-    position: relative;       /* keep content on top */
-    z-index: 2;
+    top: 24%;  /* move content further upward on small screens */
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    width: 90%;
     text-align: center;
-    color: #000;
-    padding: 1rem 1.5rem;
-    margin-top: 50px;
-    transform: none;
-    
   }
 
-  .hero-text h1 {
+  .hero-content h1 {
     font-size: 1.8rem;
-    line-height: 1.2;
   }
 
-  .hero-text p {
+  .hero-content p {
     font-size: 1rem;
   }
 
- .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    width: 100%;
-  }
-
-  /* ✅ Make all buttons same width */
   .hero-buttons .btn {
-    display: inline-block;
-    width: 80%;               /* all buttons equal width */
-    max-width: 280px;         /* optional: keep them from being too wide */
-    text-align: center;
-    padding: 0.8rem 1.5rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    
-  }
-
-}
-@media (max-width: 320px) {
-  .hero-content {
-    top: 70px;              /* push content below the navbar */
-    left: 50%;
-    transform: translateX(-50%); /* horizontal centering only */
-    position: absolute;      /* keep absolute positioning */
-    width: 90%;
-    max-width: 280px;
-    z-index: 2;
-  }
-
-  .hero-text h1 {
-    font-size: 1.3rem;      /* shrink text for tiny screen */
-    line-height: 1.2;
-  }
-
-  .hero-text p {
-    font-size: 0.85rem;
-  }
-
-  .hero-buttons .btn {
-    width: 90%;
+    width: 80%;
     max-width: 250px;
-    font-size: 0.8rem;
-    padding: 0.6rem 1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-inner {
+    padding-top: calc(90% + 60px); /* tiny screens */
+  }
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons .btn {
+    width: 90%;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+/* Optional: red highlight span */
+.red {
+  background-color: #fa520f;
+  color: #fff;
+  padding: 0 0.2rem;
+  border-radius: 4px;
+}
+
 
 
 
@@ -1446,3 +1493,35 @@ html { scroll-behavior: smooth; }
   }
 }
 
+
+/*
+.hero-bg {
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* fill without leaving extra space *
+  object-position: top;       /* top aligned, bottom visible *
+  z-index: 0;
+}
+
+/* Overlay for better text visibility *
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* Hero content sits above the image *
+.hero-content {
+   position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #000;
+  max-width: 800px;
+  margin-top: 40px; 
+}
+*/
