@@ -236,47 +236,43 @@ html { scroll-behavior: smooth; }
 
 /* Hero image fills the container */
 .hero {
-  position: relative;
+ position: relative;
   width: 100%;
-  height: 200vh; /* or desired height */
-  min-height: 600px;
+  height: 100vh;         /* match image height */
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /* Hero image fills the container fully */
 .hero-bg {
-  position: absolute;
+   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;       /* fill the hero */
-  object-position: top;    /* keep top visible */
+  height: 100%;           /* fill entire hero */
+  object-fit: cover;      /* ensure full coverage */
+  object-position: center;
   z-index: 0;
 }
 
-/* Optional overlay for contrast */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
+
 
 /* Hero content inside the image */
 .hero-content {
-  position: absolute;
-  top: 50%;                /* vertical center */
-  left: 50%;               /* horizontal center */
-  transform: translate(-50%, -50%); /* center both axes */
-  z-index: 2;
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  max-width: 800px;
-  width: 90%;
-  padding-top: 50px;       /* space from navbar */
-  box-sizing: border-box;
+  z-index: 1;
+  color: #000;
 }
+
+img.hero-bg {
+  display: block;
+}
+
 
 /* Text styles */
 .hero-text h1 {
@@ -317,92 +313,6 @@ html { scroll-behavior: smooth; }
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* ---------------- RESPONSIVE ---------------- */
-
-/* Mobile and small screens */
-.hero {
-  position: relative;
-  width: 100%;
-  min-height: 150vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 200px 20px 80px;
-  overflow: hidden;
-}
-
-/* Hero image */
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* fills container */
-  object-position: bottom;    /* show bottom of image */
-  z-index: 0;
-}
-
-/* Optional overlay for text contrast */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 0;
-}
-
-/* Hero content */
-.hero-content {
-  position: absolute;       /* absolute positioning over the image */
-  top: 30%;                 /* vertical center */
-  left: 50%;                /* horizontal center */
-  transform: translate(-50%, -50%); /* truly center both axes */
-  z-index: 1;
-  text-align: center;
-  max-width: 800px;
-  width: 90%;
-  color: black;
-}
-
-/* Heading */
-.hero-text h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.3;
-  margin-bottom: 1rem;
-}
-
-.red {
-  background-color: #fa520f;
-}
-
-/* Paragraph */
-.hero-text p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-}
-
-/* Buttons */
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.hero-buttons .btn {
-  background-color: #fa520f;
-  color: #fff;
-  padding: 0.9rem 1.8rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  text-align: center;
-  white-space: nowrap;
-  display: inline-block;
-}
 
 
 /* ================= Responsive ================= */
@@ -417,17 +327,36 @@ html { scroll-behavior: smooth; }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    position: relative;
+    width: 100%;
+    height:100vh;
+    overflow: hidden;      /* Hide any stray space */
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Match background, remove gray band */
+  }
+
+
   .hero-content {
-    top: 24%;  /* move content further upward on small screens */
+      /* move content further upward on small screens */
     transform: translate(-50%, -50%);
     max-width: 90%;
     width: 90%;
     text-align: center;
+     position: absolute;
+    top: 40%;               /* Move upward a bit */
+    left: 50%;
+    z-index: 2;
+    
   }
   
   .hero-bg{
-    height: 70%;
-    object-fit:cover;
+    object-fit:cover;  width: 100%;
+    height: 100vh;          /* Fill the full hero height */
+    object-fit: cover;
+    object-position: center top;
+    display: block;
   }
 
   .hero-content h1 {
