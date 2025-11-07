@@ -273,6 +273,7 @@ html { scroll-behavior: smooth; }
   text-align: center;
   color: white;
   color:#000;
+  transform:translateY(-180px);
   max-width: 800px;
 }
 
