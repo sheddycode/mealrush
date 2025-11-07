@@ -237,37 +237,43 @@ html { scroll-behavior: smooth; }
 .hero {
   position: relative;
   width: 100%;
+  min-height: 150vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 120px 20px 80px; /* ensures content below navbar */
   overflow: hidden;
-  background-color: #fff;
-  object-fit: contain;
-  min-height: 100vh; /* hero fills viewport height */
-  padding-top: 200px; /* remove extra top/bottom padding */
-  
 }
 
-/* HERO IMAGE */
+/* Background image fills hero nicely */
 .hero-bg {
-  position: absolute; /* always behind content */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  
+  object-fit: cover;       /* fills hero area */
+  object-position: center; /* keeps focus centered */
   z-index: 0;
 }
 
-/* CONTENT OVER IMAGE */
+/* Overlay for better text visibility */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* Hero content sits above the image */
 .hero-content {
   position: relative;
   z-index: 1;
-  color: black;
   text-align: center;
+  color:#000;
   max-width: 800px;
-  padding: 1rem 1rem;
-  transform: translateY(-120px); 
+  
 }
 
 /* TITLE STYLE */
@@ -276,12 +282,14 @@ html { scroll-behavior: smooth; }
   font-weight: 800;
   line-height: 1.3;
   margin-bottom: 1rem;
+  
 }
 
 /* PARAGRAPH */
 .hero-text p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
+  
 }
 
 /* BUTTONS */
