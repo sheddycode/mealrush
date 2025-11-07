@@ -272,6 +272,7 @@ html { scroll-behavior: smooth; }
   z-index: 1;
   text-align: center;
   color: white;
+  color:#000;
   max-width: 800px;
 }
 
