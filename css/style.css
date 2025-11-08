@@ -391,7 +391,7 @@ html { scroll-behavior: smooth; }
 }
 @media (max-width: 480px) {
   .hero {
-    height: 100vh !important;             /* even shorter on tiny phones */
+    height: 120vh !important;             /* even shorter on tiny phones */
   }
 
   .hero-bg {
