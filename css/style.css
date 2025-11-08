@@ -368,7 +368,7 @@ html { scroll-behavior: smooth; }
   }
 
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 1.54rem;
     line-height: 1.3;
   }
 
@@ -405,22 +405,16 @@ html { scroll-behavior: smooth; }
     max-width: 360px;
   }
 
-  .hero-text h1 {
-    font-size: 1.3rem;
-    line-height: 1.2;
-  }
-
-  .hero-text p {
-    font-size: 0.85rem;
-  }
-
-  .hero-buttons .btn {
-    font-size: 0.75rem;
-    padding: 0.35rem 0.9rem;  /* reduce button height further */
-    border-radius: 20px;
-    width: 85%;
-    max-width: 200px;
-  }
+.hero-buttons .btn {
+  display: inline-block;       /* ensures background wraps text */
+  white-space: nowrap;         /* prevent text from wrapping */
+  width: auto;                 /* button expands with text */
+  max-width: 100%;             /* never exceed container */
+  padding: 0.5rem 1rem;        /* adjust padding to fit text */
+  font-size: 0.85rem;          /* smaller font on small screens */
+  text-align: center;
+  box-sizing: border-box;      /* include padding in width */
+}
 }
 
 
