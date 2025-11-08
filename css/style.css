@@ -806,13 +806,13 @@ html { scroll-behavior: smooth; }
 
 /* Optional delay classes */
 .animate-delay-1 {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 .animate-delay-2 {
-  animation-delay: 0.6s;
+  animation-delay: 0.4s;
 }
 .animate-delay-3 {
-  animation-delay: 0.8s;
+  animation-delay: 0.6s;
 }
 
  /* Animation ends*/

@@ -32,12 +32,12 @@ closeBtn.addEventListener("click", () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("animate-show");
-        entry.target.classList.add("animate-hero-show");
+      
       }
     });
   }, { threshold: 0.2 }); // Trigger when 20% visible
 
   // Observe each card
-  document.querySelectorAll('.animate-one, .animate-two, animate-hero  .animate-three')
+  document.querySelectorAll('.animate-one, .animate-two, .animate-three')
     .forEach(el => observer.observe(el));
 });
