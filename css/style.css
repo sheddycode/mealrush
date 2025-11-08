@@ -391,7 +391,7 @@ html { scroll-behavior: smooth; }
 }
 @media (max-width: 480px) {
   .hero {
-    height: 80vh;             /* even shorter on tiny phones */
+    height: 100vh !important;             /* even shorter on tiny phones */
   }
 
   .hero-bg {
@@ -405,16 +405,14 @@ html { scroll-behavior: smooth; }
     max-width: 360px;
   }
 
-.hero-buttons .btn {
-  display: inline-block;       /* ensures background wraps text */
-  white-space: nowrap;         /* prevent text from wrapping */
-  width: auto;                 /* button expands with text */
-  max-width: 100%;             /* never exceed container */
-  padding: 0.5rem 1rem;        /* adjust padding to fit text */
-  font-size: 0.85rem;          /* smaller font on small screens */
-  text-align: center;
-  box-sizing: border-box;      /* include padding in width */
-}
+
+  .hero-buttons .btn {
+    font-size: 1rem;
+    padding: 0.35rem 0.9rem;  /* reduce button height further */
+    border-radius: 20px;
+    width: 85%;
+    max-width: 200px;
+  }
 }
 
 
